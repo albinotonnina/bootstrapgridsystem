@@ -1,0 +1,90 @@
+<section>
+    <h2>Responsive layouts: the breakpoints</h2>
+
+    <table class="breakpoints-data">
+        <tbody>
+        <tr>
+            <th align="center">Features</th>
+            <th align="center">Extra small devices <br><img src="lib/images/devices/xs.png"/></th>
+            <th align="center">Small devices <br><img src="lib/images/devices/sm.png"/></th>
+            <th align="center">Medium devices <br><img src="lib/images/devices/md.png"/></th>
+            <th align="center">Large devices <br><img src="lib/images/devices/lg.png"/></th>
+        </tr>
+        <tr>
+            <td align="center">
+                Max container width
+            </td>
+            <td align="center">None (auto)</td>
+            <td align="center"><strong>750px</strong></td>
+            <td align="center"><strong>970px</strong></td>
+            <td align="center"><strong>1170px</strong></td>
+        </tr>
+        <tr>
+            <td align="center">Grid behavior</td>
+            <td align="center">Horizontal at all times</td>
+            <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+        </tr>
+        <tr>
+            <td align="center">Gutter width</td>
+            <td colspan="4"><strong>15px</strong> on each side of a column (i.e. <strong>30px</strong>)</td>
+        </tr>
+        <tr>
+            <td align="center">Class prefix</td>
+            <td align="center"><code>.col-xs-</code></td>
+            <td align="center"><code>.col-sm-</code></td>
+            <td align="center"><code>.col-md-</code></td>
+            <td align="center"><code>.col-lg-</code></td>
+        </tr>
+
+        </tbody>
+    </table>
+</section>
+<section>
+
+    <h2>Responsive layouts with Bootstrap's grid system</h2>
+
+    <div class="row">
+        <div class="col-xs-12 bigger-code">
+<pre><code>
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            content
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            content
+        </div>
+
+    </div>
+
+</code></pre>
+
+            <p class="smaller">The two blocks behave the same way.</p>
+            <p class="smaller">Also, horizontal XS, collapsed SM,MD,LG</p>
+        </div>
+
+    </div>
+
+    <aside class="notes">
+        <p class="smaller">Grid classes apply to devices with screen widths <strong>greater than</strong> or
+            <strong>equal</strong> to the breakpoint sizes, and
+            <strong>override</strong> grid classes targeted at smaller devices.</p>
+
+        <p class="smaller">Therefore, e.g. applying any <strong>
+            <italic>.col-md-*</italic>
+        </strong> class to
+            an element will not only affect its styling on medium devices but also on large devices if a
+            <strong>
+                <italic>.col-lg-*</italic>
+            </strong> class is not present.
+        </p>
+    </aside>
+
+</section>
+
+
+
+
+
+

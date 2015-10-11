@@ -1,0 +1,249 @@
+<section>
+    <h2>I know...</h2>
+<pre class="bigger-code"><code class="liveCoding xml" data-livecoding-id="html-live-coding" contenteditable>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-md-3 green">
+                Sidebar
+            </div>
+            <div class="col-sm-8 col-md-9">
+                <div class="row">
+                    <div class="col-sm-4 col-md-3 violet">
+                        avatar
+                    </div>
+                    <div class="col-sm-8 col-md-9 red">
+                        content
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</code></pre>
+    <div class="resizable ui-widget-content">
+        <code id="html-live-coding" class="html-live-coding">
+
+        </code>
+    </div>
+
+</section>
+
+<section>
+    <h2>Semantic and more readable</h2>
+<pre class="bigger-code"><code class="liveCoding xml" data-livecoding-id="html-live-coding2" contenteditable>
+
+    <div class="container-fluid">
+        <div class="my-module-main-body">
+            <div class="sidebar">
+                Sidebar
+            </div>
+            <div class="main-content">
+                <div class="item">
+                    <div class="avatars">
+                        avatar
+                    </div>
+                    <div class="content">
+                        content
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</code></pre>
+    <div class="resizable ui-widget-content">
+        <code id="html-live-coding2" class="html-live-coding">
+
+        </code>
+    </div>
+
+</section>
+
+
+<section>
+    <h2>Semantics? Mixins</h2>
+
+    <div class="row">
+        <div class="col-xs-7">
+     <pre class="bigger-code"><code>
+    @import "bootstrap"
+
+    // my page module layout
+
+    .my-module-main-body{
+
+
+        .sidebar{
+
+        }
+
+        .main-content{
+
+        }
+
+        .item {
+
+
+            .avatars{
+
+            }
+
+            .content{
+
+            }
+        }
+    }
+
+     </code></pre>
+        </div>
+        <div class="col-xs-5 text-left">
+            <ul>
+                <li>SASS/LESS Mixins</li>
+                <li>Improved readability</li>
+                <li>Better maintenance</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<section>
+    <h2>Semantics? Mixins</h2>
+
+    <div class="row">
+        <div class="col-xs-7">
+  <pre class="bigger-code"><code>
+    @import "bootstrap"
+
+    // my page module layout
+
+    .my-module-main-body{
+        .make-row();
+
+        .sidebar{
+            .make-sm-column(4);
+        }
+
+        .main-content{
+            .make-sm-column(8);
+        }
+
+        .item {
+        .make-row();
+
+            .avatars{
+                .make-sm-column(4);
+            }
+
+            .content{
+                .make-sm-column(8);
+            }
+        }
+    }
+
+  </code></pre>
+        </div>
+        <div class="col-xs-5 text-left">
+            <ul>
+                <li>SASS/LESS Mixins</li>
+                <li>Improved readability</li>
+                <li>Better maintenance</li>
+            </ul>
+        </div>
+    </div>
+
+
+</section>
+
+<section>
+    <h2>Add breakpoints</h2>
+
+    <div class="row">
+        <div class="col-xs-7">
+        <pre class="bigger-code"><code class="SCSS">
+    .sidebar{
+       .make-sm-column(4);
+    }
+
+        </code></pre>
+        </div>
+        <div class="col-xs-5 text-left">
+            <ul>
+                <li>SASS/LESS Mixins</li>
+                <li>Improved readability</li>
+                <li>Better maintenance</li>
+            </ul>
+        </div>
+    </div>
+
+
+</section>
+
+
+<section>
+    <h2>Add breakpoints</h2>
+
+    <div class="row">
+        <div class="col-xs-7">
+
+        <pre class="bigger-code"><code class="SCSS">
+    .sidebar{
+        .make-xs-column(12);
+        .make-sm-column(4);
+        .make-md-column(3);
+    }
+
+        </code></pre>
+        </div>
+        <div class="col-xs-5 text-left">
+            <ul>
+                <li>SASS/LESS Mixins</li>
+                <li>Improved readability</li>
+                <li>Better maintenance</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+
+<section>
+    <h2>One layout, many possibilities</h2>
+    <ul class="demo-resize-menu">
+        <li class="active"><a id="xs" href="#">XS</a></li>
+        <li><a id="sm" href="#">SM</a></li>
+        <li><a id="md" href="#">MD</a></li>
+        <li><a id="lg" href="#">LG</a></li>
+    </ul>
+
+
+    <div class="live-resize-wrapper" style="width:540px;">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="./steps/iframedcontent.html"></iframe>
+    </div>
+
+    <script>
+
+        $('.demo-resize-menu li').on('click', function (event) {
+            event.preventDefault();
+            console.log($(this));
+            $('.demo-resize-menu li').removeClass('active');
+            $(event.currentTarget).addClass('active');
+        });
+
+        $('#xs').on('click', function () {
+            $('.live-resize-wrapper').width('540px');
+        });
+        $('#sm').on('click', function () {
+            $('.live-resize-wrapper').width('780px');
+        });
+        $('#md').on('click', function () {
+            $('.live-resize-wrapper').width('980px');
+        });
+        $('#lg').on('click', function () {
+            $('.live-resize-wrapper').width('1180px');
+        });
+
+    </script>
+</section>

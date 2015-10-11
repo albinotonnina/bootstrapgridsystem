@@ -1,0 +1,200 @@
+<section>
+
+    <h2>Grids with Bootstrap</h2>
+    <img src="lib/images/mockup.png"/>
+
+
+    <aside class="notes">
+        <p>Columns and rows are the groupings of units that create the visual structure of the page.</p>
+
+    </aside>
+
+</section>
+
+<section>
+
+
+    <div class="row text-justify">
+        <div class="col-xs-8">
+            <img src="lib/images/lg_grid_forum_large.jpg"/>
+        </div>
+        <div class="col-xs-4">
+            <h1>12</h1>
+
+            <h3>a magic number.</h3>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>In general, we want to create units in multiples of three or four.</p>
+
+        <p>Twelve is ideal, because it's a multiple of three and four.</p>
+
+        <p>Container, Row, Column, Gutter</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Grid structure</h2>
+
+    <div class="row">
+        <div class="col-xs-12 text-left bigger-code">
+<pre><code>
+<container>
+
+    <row>
+
+        <column>
+
+        </column>
+
+    </row>
+
+</container>
+
+</code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Grid Elements: Container</h2>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="lib/images/grid-elements/image-1.png"/>
+        </div>
+        <div class="col-xs-12 text-left bigger-code">
+<pre><code>
+<div class="container">
+
+</div>
+
+</code></pre>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>The container has the purpose to provide padding so the content doesn’t touch the edge of the
+            browser.</p>
+
+        <p>This is 15px ($gutter/2) on each side as seen in pink in the image.</p>
+
+        <p>You never need another container inside of a container.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Grid Elements: Row</h2>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="lib/images/grid-elements/image-2.png"/>
+        </div>
+        <div class="col-xs-12 text-left bigger-code">
+<pre><code>
+<div class="row">
+
+</div>
+
+</code></pre>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>
+            The row provides the columns a place to live. It
+            also acts as a wrapper since all the columns float left, additional rows don’t have overlaps
+            when floats get weird.
+        </p>
+
+        <p class="smaller text-left">
+            Rows also have a unique aspect of having 15px of <strong>negative margin</strong> on each side.
+            The div that makes up the row would normally be constrained inside
+            of the containers padding. The 15px
+            negative margins push the row out over top of the containers 15px padding, essentially
+            negating it. Why? Because of how the columns work.
+        </p>
+
+        <p class="smaller text-left">Never use a row outside a container, it won’t work.</p>
+    </aside>
+
+</section>
+
+<section>
+    <h2>Grid Elements: Columns</h2>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="lib/images/grid-elements/image-3.png"/>
+        </div>
+        <div class="col-xs-12 bigger-code">
+<pre><code>
+<div class="col-lg-3">
+
+</div>
+
+<div class="col-lg-9">
+
+</div>
+
+</code></pre>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p class="smaller text-left">
+            The columns now have <strong>15px padding</strong>, seen in yellow. This padding means that the columns
+            actually touch
+            the edge of the row, which itself touches the edge of the container since the row has the negative
+            margin, and the container has the positive padding.
+        </p>
+
+        <p class="smaller text-left">
+            But, the padding on the column pushes anything
+            inside the column in to where it needs to be, and also provides the <strong>30px gutter</strong> between
+            columns.
+        </p>
+
+        <p class="smaller text-left">
+            Never use a column outside of a row, it won’t work.
+        </p>
+    </aside>
+
+</section>
+
+<section>
+    <h2>Nesting</h2>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="lib/images/grid-elements/image-5.png"/>
+        </div>
+        <div class="col-xs-12 bigger-code">
+<pre><code>
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-6"></div>
+        <div class="col-sm-6"></div>
+    </div>
+</div>
+
+</code></pre>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p class="smaller text-left">
+            When you have a container, row, and column set up, you can make new grids inside of a column.
+            You add rows right inside the outer columns, you do not need to use them in containers.
+        </p>
+
+        <p class="smaller text-left">
+            The trick here is that the column acts the same way as a container:<br>
+            it has <strong>15px of padding</strong> that allows the row’s negative <strong>15px of margin</strong> to
+            overlay it.
+        </p>
+    </aside>
+
+</section>
+

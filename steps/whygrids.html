@@ -1,0 +1,136 @@
+<section>
+    <h2>Why I like grid frameworks</h2>
+
+
+    <div class="inline-fragments">
+        <div class="fragment current-visible detached"><h2>Choose a workplace:</h2></div>
+        <div class="fragment current-visible detached"><img src="lib/images/scaffolding1.jpg"/></div>
+        <div class="fragment current-visible detached"><img src="lib/images/scaffolding2.jpg"/></div>
+    </div>
+
+
+    <aside class="notes">
+        <p>You are in constructions, a builder working with scaffolding...</p>
+
+        <p>The vast majority of websites and applications use a grid. There may be not an explicit grid system in place
+            but
+            a simple two-column layout with a sidebar and a main content area is already a grid.</p>
+
+        <p>We actually invent a new grid system around the product. When the layout changes a bit though, sometimes it's
+            not easy to maintain the initial stability.</p>
+
+        <p>Grid frameworks such as Bootstrap's grid system are there to manage a more complex layouts</p>
+    </aside>
+
+</section>
+
+<section>
+
+    <h2>The grid is the mannequin and the comp is the pattern.</h2>
+
+    <div class="inline-fragments">
+        <div class="row">
+            <div class="col-xs-6"><img src="lib/images/design-grid.jpg" class="img-responsive"/></div>
+            <div class="col-xs-6"><img src="lib/images/design-grid-2.jpg" class="img-responsive"/></div>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>Working with grids allows designers and programmers to easily communicate and understand how to put webpages
+            together. It provides developers with units of measurement that they can easily turn into divs.</p>
+
+        <p>It also informs both sides how to layout elements on a page so that they can transition between mobile and
+            desktop.</p>
+
+
+    </aside>
+</section>
+
+<section>
+    <h2>Benefits of grid frameworks</h2>
+
+    <ul>
+        <li class="fragment fade-in"><h3>Visual harmony</h3></li>
+        <li class="fragment fade-in"><h3>A balanced and consistently implemented design scheme will increase readers’
+            confidence</h3></li>
+        <li class="fragment fade-in"><h3>Provides coherence to complexity</h3></li>
+        <li class="fragment fade-in"><h3>Easy maintenance</h3></li>
+        <li class="fragment fade-in"><h3>Communication developers/designers, smoother workflow</h3></li>
+        <li class="fragment fade-in"><h3>Responsive design</h3></li>
+    </ul>
+
+    <aside class="notes">
+        <p>The goal is to establish a consistent, logical screen layout, one that allows us to “plug in” text and
+            graphics without having to stop and rethink our basic design approach on each new page.</p>
+
+        <p>coherence to complexity: it's a matter of counting until 12.</p>
+
+        <p>easy maintenance: it's outside our code but always available.</p>
+
+        <p>communication: we sometimes communicate to each other with two slightly different unit of measurements, that
+            leads to misunderstandings or pitfalls.</p>
+    </aside>
+
+</section>
+
+<section>
+    <h2>Nobody wants a layout like this</h2>
+    <img src="lib/images/badgrid.jpg"/>
+</section>
+
+<section>
+    <h2>Also nobody wants their css files to look like this</h2>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <h4>layout.css</h4>
+<pre><code>
+.header_01{
+width:213px;
+display:inline-block;
+}
+
+.header_02{
+width:619px;
+float:left;
+}
+
+.header_right{
+width:112px;
+position:absolute;
+right:0;
+top:0;
+}
+
+@media (max-width: 600px) {
+.header_right{
+width:19%;
+}
+}
+
+</code></pre>
+        </div>
+        <div class="col-xs-3">
+            <h4>sidebar.css</h4>
+<pre><code>
+#sidebar{
+width:14%;
+float:left;
+}
+
+</code></pre>
+        </div>
+        <div class="col-xs-3">
+            <h4>another file</h4>
+<pre><code>
+#main-content{
+width: 88%;
+float:left;
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+</section>

@@ -1,0 +1,167 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content=="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Bootstrap Toolkit</title>
+    <link rel="stylesheet" href="../css/theme/solarized.css" id="theme">
+
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: transparent;
+            color: white;
+            font-size: 42px;
+            font-family: Helvetica;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        [class*="col-"] {
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            -ms-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+
+        #sidebar {
+            background-color: red;
+            display: table;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        #sidebar:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        #banner {
+            background-color: greenyellow;
+            color: #586e75;
+            margin-bottom: 30px;
+        }
+
+        #banner:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .widget {
+            background-color: #0070a3;
+            height: 380px;
+        }
+
+        .widget:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 767px) {
+            #banner {
+                height: 180px;
+                margin-bottom: 15px;
+            }
+
+            .widget {
+                margin-bottom: 15px;
+                height: 80px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 983px) {
+            #sidebar {
+                height: 128px;
+                margin-bottom: 30px;
+            }
+
+            #banner {
+                height: 220px;
+            }
+
+            .widget {
+                margin-bottom: 15px;
+                height: 120px;
+            }
+        }
+
+        @media (min-width: 984px) and (max-width: 1199px) {
+            #sidebar {
+                height: 100%;
+            }
+
+            #banner {
+                height: 280px;
+            }
+
+            .widget {
+                height: 128px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+            #sidebar {
+                height: 100%;
+            }
+
+            #banner {
+                height: 280px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-lg-2 col-md-3 hidden-xs">
+                <div id="sidebar" class="text-center">
+                    sidebar
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-9 col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="banner" class="text-center">
+                            banner
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-xs-12">
+                        <div class="widget text-center">widget</div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="widget text-center">widget</div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="widget text-center">widget</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
