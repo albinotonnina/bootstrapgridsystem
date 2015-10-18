@@ -44,6 +44,7 @@ function init(){
                 showNotes:false,
                 transition: 'fade', // none/fade/slide/convex/concave/zoom
                 dependencies: [
+
                     {src: 'lib/js/classList.js', condition: function () {return !document.body.classList;}},
                     {src: 'plugin/markdown/marked.js', condition: function () {return !!document.querySelector('[data-markdown]');}},
                     {src: 'plugin/markdown/markdown.js', condition: function () {return !!document.querySelector('[data-markdown]');}},
