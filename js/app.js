@@ -41,7 +41,7 @@ function init(){
                 progress: false,
                 history: true,
                 center: false,
-                showNotes:false,
+                showNotes:true,
                 transition: 'fade', // none/fade/slide/convex/concave/zoom
                 dependencies: [
 
