@@ -38,21 +38,32 @@
     <h2>Grid structure</h2>
 
     <div class="row">
-        <div class="col-xs-12 text-left bigger-code">
-<pre><code>
-<container>
+        <div class="col-xs-12 text-left">
 
-    <row>
 
-        <column>
+<pre class="bigger-code"><code class="liveCoding xml" data-livecoding-id="html-live-coding3" contenteditable>
 
-        </column>
-
-    </row>
-
-</container>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 yellow">
+                Column 1
+            </div>
+            <div class="col-sm-9 red">
+                Column 2
+            </div>
+        </div>
+    </div>
 
 </code></pre>
+<div class="">
+    <code id="html-live-coding3" class="html-live-coding">
+
+    </code>
+</div>
+
+
+
+
         </div>
     </div>
 </section>
@@ -62,13 +73,23 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <img src="lib/images/grid-elements/image-1.png"/>
+            <img src="lib/images/grid-elements/image-1.png" class="small" />
         </div>
-        <div class="col-xs-12 text-left bigger-code">
+        <div class="col-xs-6 text-left bigger-code">
 <pre><code>
 <div class="container">
 
 </div>
+
+</code></pre>
+        </div>
+        <div class="col-xs-6 text-left bigger-code">
+<pre><code>
+.container{
+    width: {breakpoint max width};
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 </code></pre>
         </div>
@@ -89,9 +110,9 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <img src="lib/images/grid-elements/image-2.png"/>
+            <img src="lib/images/grid-elements/image-2.png" class="small" />
         </div>
-        <div class="col-xs-12 text-left bigger-code">
+        <div class="col-xs-6 text-left bigger-code">
 <pre><code>
 <div class="row">
 
@@ -99,19 +120,26 @@
 
 </code></pre>
         </div>
+        <div class="col-xs-6 text-left bigger-code">
+<pre><code>
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+</code></pre>
+        </div>
     </div>
 
     <aside class="notes">
         <p>
-            The row provides the columns a place to live. It
-            also acts as a wrapper since all the columns float left, additional rows don’t have overlaps
-            when floats get weird.
+            The row provides the columns a place to live.
         </p>
 
         <p class="smaller text-left">
             Rows also have a unique aspect of having 15px of <strong>negative margin</strong> on each side.
-            The div that makes up the row would normally be constrained inside
-            of the containers padding. The 15px
+            The row would normally be constrained inside
+            of the container's padding. The 15px
             negative margins push the row out over top of the containers 15px padding, essentially
             negating it. Why? Because of how the columns work.
         </p>
@@ -126,9 +154,9 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <img src="lib/images/grid-elements/image-3.png"/>
+            <img src="lib/images/grid-elements/image-3.png" class="small" />
         </div>
-        <div class="col-xs-12 bigger-code">
+        <div class="col-xs-6 bigger-code">
 <pre><code>
 <div class="col-sm-3">
 
@@ -140,7 +168,24 @@
 
 </code></pre>
         </div>
+        <div class="col-xs-6 bigger-code">
+<pre><code>
+.col-md-3 {
+    float: left;
+    width: 25%;
+}
+
+.col-md-9 {
+    float: left;
+    width: 75%;
+}
+
+</code></pre>
+        </div>
     </div>
+
+
+
 
     <aside class="notes">
         <p class="smaller text-left">
@@ -168,7 +213,7 @@
 
     <div class="row">
         <div class="col-xs-12">
-            <img src="lib/images/grid-elements/image-5.png"/>
+            <img src="lib/images/grid-elements/image-5.png" class="small" />
         </div>
         <div class="col-xs-12 bigger-code">
 <pre><code>
@@ -185,9 +230,10 @@
 
     <aside class="notes">
         <p class="smaller text-left">
-            When you have a container, row, and column set up, you can make new grids inside of a column.
-            You add rows right inside the outer columns, you do not need to use them in containers.
+            You can make new grids inside of a column.
+            You add rows right inside the outer columns
         </p>
+        <p>you do not need to use them in containers.</p>
 
         <p class="smaller text-left">
             The trick here is that the column acts the same way as a container:<br>

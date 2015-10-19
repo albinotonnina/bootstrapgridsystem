@@ -8,7 +8,7 @@
 
 	console.log( 'View slide notes at ' + window.location.origin + '/notes/' + socketId );
 
-	window.open( window.location.origin + '/notes/' + socketId, 'notes-' + socketId );
+//	window.open( window.location.origin + '/notes/' + socketId, 'notes-' + socketId );
 
 	/**
 	 * Posts the current slide data to the notes window
@@ -35,6 +35,8 @@
 			messageData.notes = notesElement.innerHTML;
 			messageData.markdown = typeof notesElement.getAttribute( 'data-markdown' ) === 'string';
 		}
+
+		console.log(messageData);
 
 		socket.emit( 'statechanged', messageData );
 

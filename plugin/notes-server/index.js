@@ -19,6 +19,7 @@ var opts = {
 io.on( 'connection', function( socket ) {
 
 	socket.on( 'new-subscriber', function( data ) {
+		console.log(data);
 		socket.broadcast.emit( 'new-subscriber', data );
 	});
 

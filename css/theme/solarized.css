@@ -6151,7 +6151,10 @@ body {
 
 .reveal section img {
   border: 0;
-  box-shadow: none; }
+  box-shadow: none;
+  margin: 0; }
+  .reveal section img.small {
+    max-height: 400px; }
 
 .reveal .speaker-notes {
   max-height: 30%; }
@@ -6164,7 +6167,7 @@ body {
   max-height: 100%; }
 
 .reveal iframe {
-  min-height: 500px;
+  min-height: 600px;
   background-color: transparent;
   max-width: none;
   max-height: none; }
@@ -6181,7 +6184,7 @@ body {
   .reveal .breakpoints-data th {
     height: 120px; }
   .reveal .breakpoints-data code {
-    font-size: 36px; }
+    font-size: 28px; }
 
 .reveal .demo-resize-menu {
   list-style-type: none;
