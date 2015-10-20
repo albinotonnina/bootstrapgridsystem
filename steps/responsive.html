@@ -1,5 +1,5 @@
 <section>
-    <h2>Responsive layouts: the breakpoints</h2>
+    <h2>Responsive: breakpoints and grid classes</h2>
 
     <table class="breakpoints-data">
         <tbody>
@@ -19,97 +19,22 @@
             <td align="center"><strong>970px</strong></td>
             <td align="center"><strong>1170px</strong></td>
         </tr>
+
         <tr>
-            <td align="center">Grid behavior</td>
-            <td align="center">Horizontal at all times</td>
-            <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
-        </tr>
-        <tr>
-            <td align="center">Gutter width</td>
-            <td colspan="4"><strong>15px</strong> on each side of a column (i.e. <strong>30px</strong>)</td>
-        </tr>
-        <tr>
-            <td align="center">Class prefix</td>
-            <td align="center"><code>.col-xs-</code></td>
-            <td align="center"><code>.col-sm-</code></td>
-            <td align="center"><code>.col-md-</code></td>
-            <td align="center"><code>.col-lg-</code></td>
+            <td align="center">Class prefix (* = 1 to 12)</td>
+            <td align="center"><code>.col-xs-*</code></td>
+            <td align="center"><code>.col-sm-*</code></td>
+            <td align="center"><code>.col-md-*</code></td>
+            <td align="center"><code>.col-lg-*</code></td>
         </tr>
 
         </tbody>
     </table>
-</section>
-
-<section>
-
-    <h2>Responsive layouts with Bootstrap's grid system</h2>
-
-    <div class="row">
-        <div class="col-xs-12 bigger-code">
-<pre><code>
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-sm-6">
-                content
-            </div>
-
-            <div class="col-sm-6">
-                content
-            </div>
-
-        </div>
-
-    </div>
-
-</code></pre>
-
-
-        </div>
-
-    </div>
-
-<aside class="notes">
-    <p>element classes</p>
-</aside>
-
-</section>
-
-
-<section>
-
-    <h2>Responsive layouts with Bootstrap's grid system</h2>
-
-    <div class="row">
-        <div class="col-xs-12 bigger-code">
-<pre><code>
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-sm-6 col-md-7">
-                content
-            </div>
-
-            <div class="col-sm-6 col-md-5">
-                content
-            </div>
-
-        </div>
-
-    </div>
-
-</code></pre>
-
-        </div>
-
-    </div>
 
     <aside class="notes">
-        <p class="smaller">Grid classes apply to devices with screen widths <strong>greater than</strong> or
-            <strong>equal</strong> to the breakpoint sizes, and
-            <strong>override</strong> grid classes targeted at smaller devices.</p>
+        <p>Ech class set</p>
+        <p>The grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices.</p>
+
     </aside>
 
 </section>
@@ -121,15 +46,91 @@
     <div class="row">
         <div class="col-xs-12 bigger-code">
 <pre><code>
-    <div class="col-xs-12 col-sm-6">
-        content
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            content
+        </div>
+
+        <div class="col-sm-6">
+            content
+        </div>
+
     </div>
 
-    <!-- is equal to-->
+</div>
 
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        content
+</code></pre>
+
+
+        </div>
+
     </div>
+
+    <aside class="notes">
+        <p>We want to add a medium breakpoint in this layout to target bigger screens.</p>
+
+        <p>In the small breakpoint we want to cut the available space into two halves</p>
+
+        <p>In the medium breakpoint (and so the larger) the designer decided that the left area should be smaller.</p>
+    </aside>
+
+</section>
+
+
+<section>
+
+    <h2>Responsive layouts with Bootstrap's grid system</h2>
+
+    <div class="row">
+        <div class="col-xs-12 bigger-code">
+<pre><code>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-6 col-md-4">
+            content
+        </div>
+
+        <div class="col-sm-6 col-md-8">
+            content
+        </div>
+
+    </div>
+
+</div>
+
+</code></pre>
+
+        </div>
+
+    </div>
+
+    <aside class="notes">
+
+    </aside>
+
+</section>
+
+<section>
+
+    <h2>Responsive layouts with Bootstrap's grid system</h2>
+
+    <div class="row">
+        <div class="col-xs-12 bigger-code">
+<pre><code>
+<div class="col-xs-12 col-sm-6">
+    content
+</div>
+
+<!-- is equal to-->
+
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    content
+</div>
 
 </code></pre>
 
@@ -139,18 +140,10 @@
     </div>
 
     <aside class="notes">
-        <p class="smaller">Grid classes apply to devices with screen widths <strong>greater than</strong> or
-            <strong>equal</strong> to the breakpoint sizes, and
-            <strong>override</strong> grid classes targeted at smaller devices.</p>
+        <p>The grid classes apply to devices with screen widths greater than or equal to the breakpoint sizes, and override grid classes targeted at smaller devices.</p>
 
-        <p class="smaller">Therefore, e.g. applying any <strong>
-            <italic>.col-md-*</italic>
-        </strong> class to
-            an element will not only affect its styling on medium devices but also on large devices if a
-            <strong>
-                <italic>.col-lg-*</italic>
-            </strong> class is not present.
-        </p>
+        <p>The styling applied to the extra small breakpoint affects also the small, the medium and the large breakpoint styling, unless we add a class for the small breakpoint,
+            that would not affect the extra small breakpoint styling but it would affect the small and also the medium and the large breakpoint styling.</p>
     </aside>
 
 </section>

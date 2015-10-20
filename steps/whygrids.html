@@ -70,7 +70,7 @@
     </ul>
 
     <aside class="notes">
-        <p>The goal is to establish a consistent, logical screen layout, one that allows us to “plug in” text and
+        <p>The goal is to establish a consistent, logical layout, one that allows us to “plug in” components, modules, text and
             graphics without having to stop and rethink our basic design approach on each new page.</p>
 
         <p>coherence to complexity: it's a matter of counting until 12.</p>
@@ -97,48 +97,48 @@
     <div class="row">
         <div class="col-xs-6">
             <h4>layout.css</h4>
-<pre><code>
+<pre class="bigger-code"><code>
 .header_01{
-width:213px;
-display:inline-block;
+    width:213px;
+    display:inline-block;
 }
 
 .header_02{
-width:619px;
-float:left;
+    width:619px;
+    float:left;
 }
 
 .header_right{
-width:112px;
-position:absolute;
-right:0;
-top:0;
+    width:112px;
+    position:absolute;
+    right:0;
+    top:0;
 }
 
 @media (max-width: 600px) {
-.header_right{
-width:19%;
-}
+    .header_right{
+        width:calc(100% - 121px)%;
+    }
 }
 
 </code></pre>
         </div>
         <div class="col-xs-3">
             <h4>sidebar.css</h4>
-<pre><code>
+<pre class="bigger-code"><code>
 #sidebar{
-width:14%;
-float:left;
+    width:14%;
+    float:left;
 }
 
 </code></pre>
         </div>
         <div class="col-xs-3">
             <h4>another file</h4>
-<pre><code>
+<pre class="bigger-code"><code>
 #main-content{
-width: 88%;
-float:left;
+    width: 88%;
+    float:left;
 }
 
 </code></pre>

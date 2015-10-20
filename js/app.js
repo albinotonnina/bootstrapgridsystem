@@ -44,8 +44,6 @@ function init(){
                 showNotes:false,
                 transition: 'fade', // none/fade/slide/convex/concave/zoom
                 dependencies: [
-                    { src: 'socket.io/socket.io.js', async: true },
-                    { src: 'plugin/notes-server/client.js', async: true },
 
                     {src: 'lib/js/classList.js', condition: function () {return !document.body.classList;}},
                     {src: 'plugin/markdown/marked.js', condition: function () {return !!document.querySelector('[data-markdown]');}},
